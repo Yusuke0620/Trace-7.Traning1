@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body{
+  font-family: "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  color: #2a2a2a;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+.block {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    color: #daf6ff;
+    text-shadow: 0 0 20px #0aafe6;
+    background-color: #15151e;
+
+}
+/* /ここまで共通設定 */
+.ttt,.ttt2 {
+    background-color: #809096;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+.contents {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-Archive,
+.item-New {
+    position: relative;
+    width: 49%;
+}
+.text {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 290px;
+    background-color: rgba( 0, 0, 0, 0.5);
+    text-align: center;
+}
+.item-Archive:hover,
+.item-New:hover {
+    opacity: 0.7;
+}
+
+.contents a {
+    color: #fff;
+}
+
+
+
+/* ttt2 */
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.contents2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item2_Archive,
+.item2_New {
+    width: 49%;
+    position: relative;
+}
+
+.text2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    padding: 15px 15px;
+    margin: 0 auto;
+    max-width: 290px;
+    color: #fff;
+    background-color: rgba( 0, 0, 0, 0.5);
+    text-align: center;
+    transition: all 0.5s;
+}
+.item2_Archive:hover .text2,
+.item2_New:hover .text2{
+    transition: all 1s;
+    background-color: rgba( 0, 0, 0, 1);
+}
+
+/* #mainVisual
+------------------------------- */
+#mainVisual {
+    background-image: url(mainvisual.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center top;
+}
+
+
+/* Catalog,Antique
+------------------------------- */
+.ttt3 {
+    background-color: #F5F5F5;
+}
+
+.container3 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.contents3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.contents3 img, .item3 {
+    width: 48%;
+}
+
+.item3 h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.text3 {
+    font-weight: normal;
+}
+
+.item3 h3,
+.item3 p {
+    margin-bottom: 30px;
+}
+
+/* レスポンシブ・ブレークポイント896px
+------------------------------- */
+@media screen and (max-width:896px) {
+    .Archive_New-image {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-image {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #Fashion_Style {
+        height: 53vh;
+    }
+
+    #Fashion_Style,
+    #Catalog_Antique {
+        padding: 30px 0;
+        margin-top: 50px;
+    }
+
+    .Catalog,
+    .Antique {
+        flex-direction: column;
+    }
+
+    .Catalog {
+        margin-bottom: 0;
+    }
+
+    .Catalog h3 {
+        margin: 60px 0 30px;
+    }
+    .Antique h3 {
+        margin: 15px 0 30px;
+    }
+
+    #Catalog_Antique img,
+    .Catalog_Antique-text {
+        width: 100%;
+     }
+
+    .Catalog_Antique-text {
+        margin-bottom: 60px;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        padding: 30px 5%;
+        width: 100%;
+    }
+
+    .footer-logo {
+        line-height: 0;
+        text-align: center;
+    }
+    .footer-logo,
+    .footer-text {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+h2::before{
+    content: attr(data-head);
+  }
